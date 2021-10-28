@@ -8,19 +8,37 @@
 import SwiftUI
 
 enum CurrentLight {
-    case red, yellow, green, noColor
+    case red, yellow, green
 }
 
 struct ContentView: View {
     
-    @State private var titleOfButton = "START"
-    @State private var currentLight = CurrentLight.noColor
-
-    private func nextLight() {
+    @State private var buttonTitle = "START"
+    
+    @State private var redLightState = 0.3
+    @State private var yellowLightState = 0.3
+    @State private var greenLightState = 0.3
+    
+    @State private var currentLight = CurrentLight.red
+    
+    private func nextColor() {
+        
+        let lightIsOn = 1.0
+        let lightIsOff = 0.3
+        
         switch currentLight {
-        case .red: currentLight = .yellow
-        case .yellow: currentLight = .green
-        default: currentLight = .red
+        case .red:
+            currentLight = .yellow
+            greenLightState = lightIsOff
+            redLightState = lightIsOn
+        case .yellow:
+            currentLight = .green
+            redLightState = lightIsOff
+            yellowLightState = lightIsOn
+        case .green:
+            currentLight = .red
+            greenLightState = lightIsOn
+            yellowLightState = lightIsOff
         }
     }
 }
@@ -28,21 +46,21 @@ struct ContentView: View {
 extension ContentView {
     var body: some View {
         ZStack {
-            Color(.gray)
+            Color.black
                 .ignoresSafeArea()
-
+            
             VStack(spacing: 20) {
-                ColorCircleView(color: .red, opacity: currentLight == .red ? 1 : 0.3)
-                ColorCircleView(color: .yellow, opacity: currentLight == .yellow ? 1 : 0.3)
-                ColorCircleView(color: .green, opacity: currentLight == .green ? 1 : 0.3)
-
+                ColorCircleView(color: .red, opacity: redLightState)
+                ColorCircleView(color: .yellow, opacity: yellowLightState)
+                ColorCircleView(color: .green, opacity: greenLightState)
+                
                 Spacer()
-
-                ChangeLightButton(title: titleOfButton) {
-                    if titleOfButton == "START" {
-                        titleOfButton = "NEXT"
+                
+                ChangeLightButton(title: buttonTitle) {
+                    if buttonTitle == "START" {
+                        buttonTitle = "NEXT"
                     }
-                    nextLight()
+                    nextColor()
                 }
             }
             .padding()
