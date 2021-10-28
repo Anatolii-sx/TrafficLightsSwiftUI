@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C2FB874272B3C190013D9BD /* ChangeLightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2FB873272B3C190013D9BD /* ChangeLightButton.swift */; };
 		9CDBFAB62728655900F8AC21 /* TrafficLightsSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDBFAB52728655900F8AC21 /* TrafficLightsSwiftUIApp.swift */; };
 		9CDBFAB82728655900F8AC21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDBFAB72728655900F8AC21 /* ContentView.swift */; };
 		9CDBFABA2728655B00F8AC21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CDBFAB92728655B00F8AC21 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C2FB873272B3C190013D9BD /* ChangeLightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLightButton.swift; sourceTree = "<group>"; };
 		9CDBFAB22728655900F8AC21 /* TrafficLightsSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficLightsSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CDBFAB52728655900F8AC21 /* TrafficLightsSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightsSwiftUIApp.swift; sourceTree = "<group>"; };
 		9CDBFAB72728655900F8AC21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				9CDBFAB52728655900F8AC21 /* TrafficLightsSwiftUIApp.swift */,
 				9CDBFAB72728655900F8AC21 /* ContentView.swift */,
 				9CDBFAC32728664C00F8AC21 /* ColorCircleView.swift */,
+				9C2FB873272B3C190013D9BD /* ChangeLightButton.swift */,
 				9CDBFAB92728655B00F8AC21 /* Assets.xcassets */,
 				9CDBFABB2728655B00F8AC21 /* Preview Content */,
 			);
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2FB874272B3C190013D9BD /* ChangeLightButton.swift in Sources */,
 				9CDBFAC42728664C00F8AC21 /* ColorCircleView.swift in Sources */,
 				9CDBFAB82728655900F8AC21 /* ContentView.swift in Sources */,
 				9CDBFAB62728655900F8AC21 /* TrafficLightsSwiftUIApp.swift in Sources */,

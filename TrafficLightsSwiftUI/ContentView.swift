@@ -25,7 +25,7 @@ struct ContentView: View {
                     color: .red,
                     opacity: opacitiesOfLights["Red"] ?? 0.3
                 )
-                    .padding(.top, 50)
+                    .padding(.top, 60)
                 ColorCircleView(
                     color: .yellow,
                     opacity: opacitiesOfLights["Yellow"] ?? 0.3
@@ -37,19 +37,10 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Button(action: {turnLightButtonTapped()}) {
-                    Text("\(titleOfButton)")
-                        .frame(width: 125, height: 50)
-                        .font(.title)
-                        .foregroundColor(Color.white)
-                        .background(Color.blue)
-                        .cornerRadius(12)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 12)
-                                .stroke(Color.white, lineWidth: 3)
-                        )
+                ChangeLightButton(title: titleOfButton) {
+                    turnLightButtonTapped()
                 }
-                .padding(.bottom, 50)
+                .padding(.bottom, 80)
             }
         }
     }
